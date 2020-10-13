@@ -35,9 +35,9 @@ deploy:
   script:
     - echo 'WIP'
     - chmod +x ./script/deploy.sh
-    - bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin"
-    - docker tag zutherb/monolithic-shop:latest gokceavery/WEB1066-the-app:latest
-    - docker push gokceavery/monolithic-shop:latest
+    - bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"gokceavery\" --password-stdin"
+    - docker tag zutherb/monolithic-shop:latest gokceavery/coursera-app:latest
+    - docker push gokceavery/coursera-app:latest
 
   on:
     all_branches: true
